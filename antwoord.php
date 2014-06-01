@@ -6,6 +6,10 @@
  <body>
 
 <table>
+
+<?php 
+if (isset($_POST["name"])) {
+	?>	
 <form method="post">
 </table>
 <h1><?php 
@@ -15,7 +19,10 @@ echo "Wachtwoord (Post): " . htmlspecialchars_decode($_POST["password"])."<br/>"
 ?>
 </h1>
 <form>
-
+<?php } ?> 
+<?php 
+if (isset($_GET["nameget"])) {
+	?>	
 <form method="get">
 </table>
 <h1><?php 
@@ -25,6 +32,6 @@ echo "Wachtwoord (Get): " . htmlspecialchars_decode($_GET["passwordget"])."<br/>
 ?>
 </h1>
 <form>
-
+<?php } ?> 
  </body>
  </html>
